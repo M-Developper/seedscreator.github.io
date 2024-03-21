@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+:root {
+    --bg-light:#222;
+    --bg-dark:#111;
+    --main-color:#29d9d5;
+    --light-color:#aaa;
+    --border: 0.2rem solid var(--main-color);
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    outline: none; border: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: .2s linear;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+  
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+  
+html::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+  
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+body {
+    background: #111;
+}
+section {
+    padding: 5rem 2%;
+}
+.form {
+    text-align: center;
+    background: var(--bg-light);
+    box-shadow: var(--box-shadow);
+    width: 60rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+.form .box {
+    border: var(--border);
+    border-radius: 1rem;
+    background: var(--bg-dark);
+    padding: 1.2rem 1.5rem;
+    margin: .5rem 1rem;
+    font-size: 1.8rem;
+    color: var(--light-color);
+    width: 100%;
+}
+.form .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: var(--main-color);
+    border: var(--border);
+    border-radius: 5rem;
+    cursor: pointer;
+    background: none;
+}
+.form .btn:hover {
+    background: var(--main-color);
+    color: var(--bg-dark);
+}
+section .data-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    border-radius: .5rem;
+    background: var(--bg-light);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin-top: 3rem;
+}
+section .data-container .data {
+    font-size: 1.5rem;
+    cursor: copy;
+    line-height: 1.8;
+    color: var(--light-color);
+    padding: 1rem 2rem;
+    text-transform: lowercase;
+}
+section .data-container .data:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+section .data-container .data.psw {
+    text-align: right;
+    padding-left: 3rem;
+}
+
+@media (max-width: 450px) {
+    .form {
+        width: 40rem;
+    }
+    section .data-container {
+        margin: 1rem;
+    }
+}

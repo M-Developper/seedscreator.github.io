@@ -3,7 +3,7 @@ let inputNum = document.getElementById('number-input');
 
 let readUsersFile = (file, callback) => {
     let usersFile = new XMLHttpRequest();
-    usersFile.overrideMimeType('/json/users.json');
+    usersFile.overrideMimeType('./json/users.json');
     usersFile.open('GET', file, true);
     usersFile.onreadystatechange = () => {
         if(usersFile.readyState == 4 && usersFile.status == '200')
